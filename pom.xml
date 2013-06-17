@@ -49,15 +49,25 @@
         <version.junit>4.11</version.junit>
         <version.arquillian>1.0.3.Final</version.arquillian>
         <version.arquillian.gae>1.0.0.Alpha8</version.arquillian.gae>
+
+        <!--
+        <version.arquillian.drone>1.1.1.Final</version.arquillian.drone>
+        <version.arquillian.graphene2>2.0.0.Alpha3</version.arquillian.graphene2>
+        -->
+
         <version.shrinkwrap>1.1.2</version.shrinkwrap>
         <version.shrinkwrap.resolver>2.0.0-beta-3</version.shrinkwrap.resolver>
+
+        <!-- <version.sourceforge.htmlunit>1.14, 2.12</version.sourceforge.htmlunit> -->
+        <version.sourceforge.htmlunit>2.12</version.sourceforge.htmlunit>
 
         <!-- Utils -->
         <version.org.javassist>3.15.0-GA</version.org.javassist>
         <version.org.jboss.maven.transformer.plugin>1.0.0.Beta4</version.org.jboss.maven.transformer.plugin>
 
         <!-- TestUtils -->
-        <version.org.apache.httpcomponents>4.2.5</version.org.apache.httpcomponents>
+        <!-- <version.org.apache.httpcomponents>4.2.5</version.org.apache.httpcomponents> -->
+        <version.org.apache.httpcomponents>4.3-alpha1</version.org.apache.httpcomponents>
 
         <!-- Maven -->
         <version.maven>3.0.4</version.maven>
@@ -403,6 +413,31 @@
                 <type>pom</type>
             </dependency>
 
+                      <!--terryok BEFORE-->
+            <!--
+            <dependency>
+                <groupId>org.jboss.arquillian.extension</groupId>
+                <artifactId>arquillian-drone-bom</artifactId>
+                <version>${version.arquillian.drone}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.jboss.arquillian.extension</groupId>
+                <artifactId>arquillian-drone-webdriver-depchain</artifactId>
+                <version>${version.arquillian.drone}</version>
+                <type>pom</type>
+                <scope>test</scope>
+            </dependency>
+            -->
+
+            <dependency>
+                <groupId>net.sourceforge.htmlunit</groupId>
+                <artifactId>htmlunit</artifactId>
+                <version>${version.sourceforge.htmlunit}</version>
+                <scope>test</scope>
+            </dependency>
+
             <!-- Testing -->
 
             <dependency>
@@ -416,6 +451,7 @@
                 <artifactId>junit</artifactId>
                 <version>${version.junit}</version>
             </dependency>
+
 
             <dependency>
                 <groupId>org.jboss.arquillian</groupId>

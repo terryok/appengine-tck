@@ -32,6 +32,7 @@
     <modules>
         <!-- APIs -->
         <module>appengine-tck-capability</module>
+        <module>appengine-tck-channel</module>
         <module>appengine-tck-datastore</module>
         <module>appengine-tck-example</module>
         <module>appengine-tck-logservice</module>
